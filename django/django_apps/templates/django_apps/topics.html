@@ -1,0 +1,15 @@
+{% extends "django_apps/base.html" %}
+
+{%  block content %}
+
+  <p>话题：</p>
+
+  <ul>
+  	{% for topic in topics %}
+  	  <li>{{ topic.text }}</li>
+  	  {% empty %}
+  	    <li>暂时还没有话题内容</li>
+    {% endfor %}
+  </ul>
+
+  {% endblock content %}
